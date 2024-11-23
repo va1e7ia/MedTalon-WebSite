@@ -1,0 +1,36 @@
+// Миксин для заголовков
+  @mixin heading($size, $color) {
+      font-family: $font-family;
+      font-size: $size;
+      color: $color;
+    }
+  
+  // Миксин для кнопок
+  @mixin button($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: $text-size;
+    cursor: pointer;
+  
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  
+
+  @mixin link-style($text-color, $hover-color) {
+    color: $text-color;  // Цвет текста
+    text-decoration: none;  // Убираем подчеркивание
+    cursor: pointer;
+    font-size: $text-size;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  

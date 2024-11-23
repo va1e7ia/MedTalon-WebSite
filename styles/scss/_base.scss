@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-size: $text-size;
+    color: $text-color;
+    background-color: $white;
+  }
+  
+  h1 {
+    @include heading($h1-size, $text-color-secondary);
+  }
+  
+  h2 {
+    @include heading($h2-size, $text-color-secondary);
+  }
+  
