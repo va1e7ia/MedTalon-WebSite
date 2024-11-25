@@ -1,36 +1,92 @@
-// Миксин для заголовков
+// заголовки
   @mixin heading($size, $color) {
       font-family: $font-family;
       font-size: $size;
       color: $color;
     }
   
-  // Миксин для кнопок
+  // кнопки
   @mixin button($bg-color, $text-color) {
     background-color: $bg-color;
     color: $text-color;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: $radius-default;
     font-size: $text-size;
     cursor: pointer;
+    text-decoration: none;
   
     &:hover {
       opacity: 0.9;
     }
   }
 
+  //инпуты
+  @mixin input-styles(
+    $width: 90%, 
+    $padding: 10px, 
+    $font-size: 16px, 
+    $border-color: $grey, 
+    $border-radius: $radius-default, 
+    $bg-color: $white, 
+    $focus-border: $blue-light, 
+    $focus-bg: $blue-light-trans,
+    $error-border: $red-dark-trans
+) {
+    width: $width;
+    padding: $padding;
+    font-size: $font-size;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    background-color: $bg-color;
+
+    &:focus {
+        border-color: $focus-border;
+        background-color: $focus-bg;
+    }
+
+    &:invalid:not(:focus) {
+      border-color: $border-color;
+      background-color: $bg-color; 
+  }
+
+  &:invalid:focus {
+      border-color: $error-border;
+      background-color: $red-dark-trans;
+      box-shadow: 0 0 5px $error-border;
+  }
+}
   
-
-  @mixin link-style($text-color, $hover-color) {
-    color: $text-color;  // Цвет текста
-    text-decoration: none;  // Убираем подчеркивание
-    cursor: pointer;
-    font-size: $text-size;
-
+// для серых кнопок
+  @mixin link-style($color: $white, $hover-color: $text-color-link, $font-size: 16px) {
+    color: $color;
+    font-size: $font-size;
+    text-decoration: none;
+  
     &:hover {
       color: $hover-color;
     }
   }
+
+  //это для футера
+  @mixin flex($justify: flex-start, $align: stretch, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+  }
+
+  // фон для главного
+  @mixin main-background($image, $height: 76vh, $padding: 50px 0) {
+    background-image: url($image);
+    height: $height;
+    background-size: cover;
+    background-position: center;
+    padding: $padding;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+  }
+  
 
   

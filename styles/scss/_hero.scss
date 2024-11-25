@@ -1,0 +1,61 @@
+.hero {
+  @include main-background("../../images/bg.jpg");
+
+  .hero-content {
+    margin: 0 auto;
+    width: 60%;
+    background-color: $blue-light-trans;
+    padding: 60px;
+    border-radius: $radius-default;
+    text-align: center;
+
+    h1 {
+      color: $text-color;
+      font-size: $h1-size;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: $text-size-main;
+      color: $text-color;
+      margin-bottom: 30px;
+    }
+
+    .btn-green {
+      @include button($green-light, $white);
+
+      &:hover {
+        background-color: $green-dark;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-content {
+      width: 70%;
+      padding: 40px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .hero-content {
+      width: 70%;
+      padding: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .hero-content .btn-green {
+      padding: 10px 25px;
+      font-size: 12px;
+    }
+  }
+}

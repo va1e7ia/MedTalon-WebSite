@@ -1,23 +1,31 @@
-// Цветовая палитра
-$white: #FCFCFD;
-$blue-light: #63D3EE;
-$black: #0A151B;
-$green-light: #84BE44;
-$green-dark: #71A736;
-$blue-dark: #2CB1D1;
-$gray: #61686A;
-$red-light: #E3746F;
-$red-dark: #CE635E;
+// цвета
+$white: #fcfcfd;
+$white-trans: rgba($white, 0.6);
+$blue-light: #63d3ee;
+$blue-light-trans: rgba($blue-light, 0.6);
+$black: #0a151b;
+$green-light: #84be44;
+$green-dark: #71a736;
+$blue-dark: #2cb1d1;
+$grey: #61686a;
+$red-light: #e3746f;
+$red-dark: #ce635e;
+$red-dark-trans: rgba(#ce635e, 0.6);
 
-// Шрифты
-$font-family: 'Roboto', sans-serif;
+// шрифты
+$font-family: "Roboto", sans-serif;
+$font-family-logo: "Lobster", sans-serif;
 
 // Размеры текста
 $h1-size: 34px;
 $h2-size: 22px;
+$text-size-main: 24px;
 $text-size: 16px;
 
-// Цвета текста
+// для текста цвета
 $text-color: $black;
-$text-color-link: $gray;
+$text-color-link: $grey;
 $text-color-secondary: $blue-dark;
+
+// для радиуса
+$radius-default: 50px;
