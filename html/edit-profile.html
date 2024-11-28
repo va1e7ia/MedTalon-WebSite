@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Редактировать профиль</title>
+    <link rel="stylesheet" href="../styles/scss/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="logo">МедТалон</div>
+          <nav class="nav">
+            <ul>
+              <li><a href="clinics.html">Медучреждения</a></li>
+              <li><a href="reviews.html">Отзывы</a></li>
+            </ul>
+          </nav>
+          <div class="auth-link">
+            <a href="#">
+              <img src="../images/user.png" alt="User Icon" class="user-icon"
+            /></a>
+          </div>
+        </div>
+      </header>
+
+      <main class="edit-profile">
+        <div class="container-input">
+          <h2>Редактировать профиль</h2>
+          <form action="profile.html" method="POST">
+            <div class="input-group">
+              <label for="lastName">Фамилия</label>
+              <input type="text" placeholder="Иванов" required />
+            </div>
+            <div class="input-group">
+              <label for="firstName">Имя</label>
+              <input type="text" placeholder="Иван" required />
+            </div>
+            <div class="input-group">
+              <label for="middleName">Отчество</label>
+              <input type="text" placeholder="Иванович" />
+            </div>
+            <div class="input-group">
+              <label for="gender">Пол</label>
+              <select required>
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="birthdate">Дата рождения</label>
+              <input type="date" required />
+            </div>
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input type="email" placeholder="example@gmail.com" required />
+            </div>
+            <div class="input-group">
+              <label for="password">Пароль</label>
+              <input type="password" placeholder="Введите новый пароль" />
+            </div>
+            <button type="submit" class="btn-submit">
+              Сохранить изменения
+            </button>
+          </form>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <p>© ЗАО «Добромед», 2010-2024. Все права защищены</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

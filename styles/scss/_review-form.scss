@@ -1,0 +1,80 @@
+.review-page {
+
+    @include main-background("../../images/bg.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    
+  
+    .review-container {
+      width: 100%;
+      max-width: 500px;
+      background: $white;
+      padding: 20px;
+      border-radius: 8px;
+  
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+  
+      .input-group {
+        @include input-group(20px); 
+
+        textarea {
+          width: 90%;
+          padding: 10px;
+          border: 1px solid $grey;
+          border-radius: 5px;
+      }
+    }
+
+      .rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 5px;
+      
+        input {
+          display: none; //скрытие радиокнопок
+        }
+      
+        label {
+          font-size: 24px;
+          color: $grey; 
+          cursor: pointer;
+      
+          &:hover,
+          &:hover ~ label {
+            color: $red-light;
+          }
+        }
+      
+        input:checked ~ label {
+          color: $red-light;
+        }
+      }
+  
+      .btn-submit {
+        @include button($green-light, $white);
+  
+        &:hover {
+          background-color: $green-dark;
+        }
+      }
+  
+      .btn-back {
+        display: block;
+        text-align: end;
+        margin-top: 15px;
+        text-decoration: none;
+        color: $grey;
+  
+        &:hover {
+          color: $blue-dark;
+        }
+      }
+    }
+  }
+  

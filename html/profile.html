@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="../styles/scss/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="logo">МедТалон</div>
+          <nav class="nav">
+            <ul>
+              <li><a href="clinics.html">Медучреждения</a></li>
+              <li><a href="reviews.html">Отзывы</a></li>
+            </ul>
+          </nav>
+          <div class="auth-link">
+            <a href="#">
+              <img src="../images/user.png" alt="User Icon" class="user-icon"
+            /></a>
+          </div>
+        </div>
+      </header>
+      <div class="profile">
+        <div class="profile-info">
+          <img
+            src="../images/person.jpg"
+            alt="Профиль пользователя"
+            class="profile-pic"
+          />
+          <div class="profile-details">
+            <h1>Иванов Иван Иванович</h1>
+            <p>03.06.2005г.<br />19 лет<br />Мужской</p>
+            <p>ivanivanov@gmail.com</p>
+          </div>
+          <a href="edit-profile.html" class="btn-green"
+            >Редактировать профиль</a
+          >
+        </div>
+
+        <div class="tickets">
+          <div class="ticket">
+            <div>
+              <p><b>Талон №2</b></p>
+              <p>
+                Витебская городская центральная поликлиника<br />Врач-терапевт
+              </p>
+            </div>
+            <div class="ticket-date">
+              <p>21.11.2024</p>
+              <p>15:00</p>
+            </div>
+          </div>
+
+          <div class="ticket">
+            <div>
+              <p><b>Талон №1</b></p>
+              <p>
+                Витебская городская центральная поликлиника<br />Врач-терапевт
+              </p>
+            </div>
+            <div class="ticket-action">
+              <a href="review-form.html" class="btn-review">Оставить отзыв</a>
+              <p>16.11.2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <p>© ЗАО «Добромед», 2010-2024. Все права защищены</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

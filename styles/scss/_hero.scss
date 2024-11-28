@@ -1,6 +1,8 @@
 .hero {
   @include main-background("../../images/bg.jpg");
-
+  display: flex;
+  flex: 1;
+  
   .hero-content {
     margin: 0 auto;
     width: 60%;

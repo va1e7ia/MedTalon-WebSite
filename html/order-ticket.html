@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заказ талона</title>
+    <link rel="stylesheet" href="../styles/scss/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="logo">МедТалон</div>
+          <nav class="nav">
+            <ul>
+              <li><a href="clinics.html">Медучреждения</a></li>
+              <li><a href="reviews.html">Отзывы</a></li>
+            </ul>
+          </nav>
+          <div class="auth-link">
+            <a href="#">
+              <img src="../images/user.png" alt="User Icon" class="user-icon" />
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <h1>Заказ талона</h1>
+        <form class="order-form">
+          <!-- Выбор поликлиники -->
+          <div class="form-field">
+            <label for="clinic">Выбор поликлиники</label>
+            <select id="clinic" name="clinic" required>
+              <option value="">Выберите поликлинику</option>
+              <option value="vitebsk-central">
+                Витебская городская центральная поликлиника
+              </option>
+              <option value="minsk-2">Минская городская поликлиника №2</option>
+              <option value="grodno-1">Гродненская поликлиника №1</option>
+            </select>
+          </div>
+
+          <!-- Выбор врача -->
+          <div class="form-field">
+            <label for="doctor">Выбор врача</label>
+            <select id="doctor" name="doctor" required>
+              <option value="">Выберите врача</option>
+              <option value="therapist">Терапевт</option>
+              <option value="dentist">Стоматолог</option>
+              <option value="pediatrician">Педиатр</option>
+            </select>
+          </div>
+
+          <!-- Выбор даты -->
+          <div class="form-field">
+            <label for="date">Выбор даты</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+
+          <!-- Комментарии -->
+          <div class="form-field">
+            <label for="comments">Комментарии</label>
+            <textarea
+              id="comments"
+              name="comments"
+              placeholder="Введите ваши комментарии..."
+              rows="4"
+            ></textarea>
+          </div>
+
+          <!-- Кнопка отправки -->
+          <button type="submit" class="btn-green">Записаться</button>
+        </form>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <p>© ЗАО «Добромед», 2010-2024. Все права защищены</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

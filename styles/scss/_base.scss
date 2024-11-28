@@ -17,6 +17,6 @@ html, body {
   }
   
   h2 {
-    @include heading($h2-size, $text-color-secondary);
+    @include heading($h2-size, $text-color);
   }
   

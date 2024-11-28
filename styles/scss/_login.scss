@@ -1,8 +1,9 @@
-.login{
-    @include main-background('../../images/bg.jpg');
+.login {
+  @include main-background("../../images/bg.jpg");
+  display: flex;
+  flex: 1;
 
-
-.login-container {
+  .login-container {
     background-color: $white-trans;
     padding: 30px;
     border-radius: $radius-default;
@@ -11,38 +12,35 @@
     margin: 0 auto;
 
     h2 {
-        text-align: center;
-        font-size: 24px;
-        margin-bottom: 20px;
-        color: $text-color;
+      text-align: center;
+      margin-bottom: 20px;
     }
-    
+
     .input-group {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
-    
+
     label {
-        display: block;
-        font-size: 14px;
-        color: $text-color;
-        margin-bottom: 5px;
+      display: block;
+      font-size: 14px;
+      color: $text-color;
+      margin-bottom: 5px;
     }
-    
+
     input {
-        @include input-styles();
-        
+      @include input-styles();
     }
-    
-    
+
     .btn-submit {
-        @include button($green-light, $white);
-  
-        &:hover {
-          background-color: $green-dark;
-        }
+      @include button($green-light, $white);
+
+      &:hover {
+        background-color: $green-dark;
       }
-      a {
-        @include link-style($text-color-link, $blue-light); 
-      }
-}
+    }
+    a {
+      @include link-style($text-color-link, $blue-light);
+    }
+  }
+
 }

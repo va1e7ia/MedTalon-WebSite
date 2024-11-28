@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>МедТалон</title>
+    <title>Вход — МедТалон</title>
     <link rel="stylesheet" href="../styles/scss/main.css" />
   </head>
   <body>
@@ -13,19 +13,19 @@
         <div class="logo">МедТалон</div>
         <nav class="nav">
           <ul>
-            <li><a href="#">Медучреждения</a></li>
-            <li><a href="#">Отзывы</a></li>
+            <li><a href="clinics.html">Медучреждения</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
           </ul>
         </nav>
         <div class="auth-link">
-          <a href="login.html">Войти</a>
+          <a href="profile.html">Войти</a>
         </div>
     </header>
     
     <div class="login">
         <div class="login-container">
             <h2>Войти в систему</h2>
-            <form action="#" method="POST">
+            <form action="../html/profile.html" method="GET" onsubmit="window.location='profile.html'; return false;">
                 <div class="input-group">
                     <label for="username">Email</label>
                     <input type="email" id="username" name="username" placeholder="example@gmail.com" required>
@@ -36,7 +36,7 @@
                    
                 </div>
                 <button type="submit" class="btn-submit">Войти</button>
-                <a>Зарегистрироваться</a>
+                <a href="register.html" class="switch-form">Зарегистрироваться</a>
             </form>
         </div>
     </div>

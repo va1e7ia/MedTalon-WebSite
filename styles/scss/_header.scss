@@ -4,10 +4,6 @@
 
   .container {
     @include flex(space-between, center);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    position: relative;
   }
 
   .logo {
@@ -36,7 +32,14 @@
       @include link-style($white, $text-color-link);
       font-weight: bold;
     }
+    .user-icon {
+      width: 24px; 
+      height: 24px;
+      vertical-align: middle; 
+    }
   }
+
+  
 
   @media screen and (max-width: 768px) {
     .logo {
@@ -52,6 +55,7 @@
       a {
         font-size: 16px; 
       }
+      
     }
   }
 
@@ -73,6 +77,10 @@
     .auth-link {
       a {
         font-size: 16px; 
+      }
+      .user-icon {
+        width: 20px; 
+        height: 20px;
       }
     }
   }

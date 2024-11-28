@@ -45,15 +45,38 @@
         background-color: $focus-bg;
     }
 
-    &:invalid:not(:focus) {
-      border-color: $border-color;
-      background-color: $bg-color; 
-  }
-
   &:invalid:focus {
-      border-color: $error-border;
       background-color: $red-dark-trans;
       box-shadow: 0 0 5px $error-border;
+  }
+}
+
+//для регистрации
+@mixin input-group($margin-bottom: 15px) {
+  margin-bottom: $margin-bottom;
+
+  label {
+    display: block;
+    font-size: 14px;
+    color: $text-color; 
+    margin-bottom: 5px;
+  }
+
+  input,
+  select {
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+    color: $text-color; 
+    border: 1px solid $grey; 
+    border-radius: 5px;
+    background: $white; 
+  }
+
+  input:focus,
+  select:focus {
+    outline: none;
+    border-color: $blue-dark; 
   }
 }
   
@@ -74,14 +97,19 @@
     justify-content: $justify;
     align-items: $align;
     flex-direction: $direction;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
   }
 
   // фон для главного
   @mixin main-background($image, $height: 76vh, $padding: 50px 0) {
     background-image: url($image);
     height: $height;
-    background-size: cover;
+    background-size: cover; // Или можно использовать auto, если хотите сохранить исходные размеры
     background-position: center;
+    background-repeat: repeat-y; // Повторять по вертикали
     padding: $padding;
     display: flex;
     align-items: center;

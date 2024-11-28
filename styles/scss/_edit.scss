@@ -1,0 +1,28 @@
+.edit-profile {
+    @include main-background("../../images/bg.jpg");
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    h2 {
+     text-align: center;
+      margin-bottom: 20px;
+    }
+  .container-input{
+    width: 60%;
+    .input-group {
+        @include input-group(20px); 
+        
+      }
+
+  
+    .btn-submit {
+      @include button($green-light, $white);
+      &:hover {
+        background-color: $green-dark;
+      }
+    }
+}
+  }
+  
